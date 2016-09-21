@@ -37,5 +37,7 @@ group :test, :development do
   gem "rspec-rails"
   gem "factory_girl_rails"
   gem "database_cleaner"
-  gem "pry"
+  gem "pry-rails"
+  gem "binding_of_caller"
+  gem "better_errors"
 end
