@@ -25,8 +25,18 @@ class Boat < ActiveRecord::Base
 
   def self.sailboats
     # all.each {|boat| boat if boat.classifications.include?("Sailboat")}
-    joins(:classifications).where(classifications: {name: "Sailboat"})
+    joins(:classifications).where(classifications: {name: 'Sailboat'})
   end
+
+  # to help with Captain tests
+  def self.catamarans
+    joins(:classifications).where(classifications: {name: "Catamaran"})
+  end
+
+  # to help with Captain tests
+  # def self.motorboats
+  #   joins(:classifications).where(classifications: {name: 'Motorboat'})
+  # end
 
   def self.with_three_classifications
     # joins(:boat_classifications)
